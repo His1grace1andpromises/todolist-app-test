@@ -1,0 +1,311 @@
+ @import url('https://fonts.googleapis.com/css?family=Quicksand|Righteous&display=swap');
+
+        .BG {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            margin: auto;
+            /* top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0; */
+            z-index: -10;
+        }
+
+        /*Background Image design*/
+
+        .dateHolder {
+            position: absolute;
+            height: 60px;
+            width: 100%;
+        }
+
+        /*Date container*/
+
+        .todate {
+            position: absolute;
+            height: 200px;
+            width: 100%;
+            background: linear-gradient(rgb(241, 41, 68), rgb(255, 0, 106), transparent);
+            margin: auto;
+            top: 0;
+            right: 0;
+            left: 0;
+            color: white;
+            font-family: 'Righteous', cursive;
+        }
+
+        /*Present date*/
+
+        .date {
+            position: relative;
+            height: 50px;
+            float: left;
+            font-size: 60px;
+            margin-left: 10px;
+        }
+
+        .daymonthyear {
+            position: relative;
+            height: 80px;
+            margin-left: 10px;
+            font-size: 20px;
+            float: left;
+            display: flex;
+            align-items: center;
+        }
+
+        /*Present Month and year*/
+
+        .week {
+            position: absolute;
+            margin: auto;
+            height: 30px;
+            width: 100%;
+            text-align: center;
+            right: 0;
+            left: 0;
+            bottom: 30%;
+        }
+
+        /*The week table allows you to see which day of the week you are in*/
+
+        .circle {
+            position: relative;
+            height: 20px;
+            width: 20px;
+            border: 1px solid white;
+            border-radius: 50px;
+            padding: 1px;
+            margin-left: 30%;
+            justify-content: center;
+        }
+
+        /*This circle element is added using js to highlight which date of the week you're in*/
+
+        .todolist {
+            position: absolute;
+            height: 70%;
+            width: 90%;
+            margin: auto;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            overflow: scroll;
+            border-radius: 10px 10px 0 0;
+        }
+
+        /*This is the container for the ToDo list elements*/
+
+        .li1 {
+            position: relative;
+            height: 120px;
+            width: 93%;
+            padding: 10px;
+            background: linear-gradient(to right, rgb(241, 41, 68), rgb(255, 0, 106), hotpink);
+            border-radius: 10px;
+        }
+
+        /*This is the basic design applied to the container of details in a ToDo list element*/
+
+        .title,
+        .time,
+        .desc {
+            position: relative;
+            height: 36px;
+            width: 90%;
+            font-family: 'Quicksand', sans-serif;
+            color: white;
+            font-size: 25px;
+            overflow-y: scroll;
+        }
+
+        /*This is the text color and design for ToDo list elements' title, time target and description*/
+
+        .time,
+        .desc {
+            font-size: 20px;
+        }
+
+        .desc {
+            overflow: scroll;
+            height: 30px;
+        }
+
+        .del {
+            position: absolute;
+            height: 20px;
+            filter: invert(1);
+            top: 15px;
+            right: 15px;
+        }
+
+        /*Design for the delete cross button*/
+
+        .add {
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            padding: 5px;
+            margin: auto;
+            bottom: 15px;
+            right: 15px;
+            background: #0ed6bb;
+            border-radius: 50px;
+            box-shadow: 0 0 20px #1bffe1;
+        }
+
+        .form {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            margin: auto;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(rgb(241, 41, 68), rgb(255, 0, 106), pink);
+            z-index: 6;
+            transition: 1s;
+            transition-timing-function: ease;
+        }
+
+        /*Form to add a new ToDo List element*/
+
+        .titleInp,
+        .timeInp,
+        .meridianInp,
+        .descInp {
+            position: absolute;
+            height: 30px;
+            font-family: 'Quicksand', sans-serif;
+            width: 70%;
+            margin: auto;
+            right: 0;
+            left: 0;
+            top: 35%;
+            border: 0;
+            text-align: center;
+            border-radius: 50px;
+            outline: none;
+        }
+
+        /*Input for various ToDo list parameters*/
+
+        .timeInp {
+            top: 45%;
+        }
+
+        .meridianInp {
+            height: 35px;
+            width: 20%;
+            left: 51%;
+            top: 44.7%;
+        }
+
+        .descInp {
+            top: 55%;
+        }
+
+        .submitBtn {
+            position: absolute;
+            height: 30px;
+            width: 70%;
+            outline: none;
+            border: 1px solid white;
+            font-family: 'Quicksand', sans-serif;
+            border-radius: 50px;
+            margin: auto;
+            right: 0;
+            left: 0;
+            top: 65%;
+            background: hotpink;
+            color: white;
+        }
+
+        /*Submit the information needed for a new ToDo list app item*/
+
+        .AddItem {
+            position: absolute;
+            height: 100px;
+            width: 100%;
+            margin: auto;
+            right: 0;
+            left: 0;
+            text-align: center;
+            top: 15%;
+            color: white;
+            font-size: 50px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .preloader {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(rgb(241, 41, 68), rgb(255, 0, 106), pink);
+            margin: auto;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 1s ease;
+        }
+
+        /*Preload GIF*/
+
+        .logo {
+            position: absolute;
+            height: 140px;
+            filter: hue-rotate(140deg);
+        }
+
+        /*Logo displayed on the preloading page*/
+
+        .loader {
+            position: absolute;
+            height: 140px;
+            bottom: 20%;
+            filter: hue-rotate(120deg);
+        }
+
+        ::-webkit-scrollbar {
+            -webkit-appearance: none;
+            appearance: none;
+            display: none;
+        }
+
+        /*To remove all the visible scrollbars, it makes the code UI look ugly*/
+
+        .plus {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background: rgb(255, 45, 90);
+            border-radius: 50%;
+            font-weight: bolder;
+            bottom: 0;
+            right: 5%;
+            box-shadow: 0 0 40px rgb(173, 7, 43);
+        }
+
+        /*Button or div element, when pressed or clicked opens the form for ToDo list element input*/
+
+        .exitForm {
+            position: absolute;
+            height: 30px;
+            filter: invert(1);
+            right: 10px;
+            top: 10px;
+
+        }
+
+        /*Button to exit the form in case it is opened by mistake by the user*/
